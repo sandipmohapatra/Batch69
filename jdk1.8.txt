@@ -5,3 +5,15 @@ spring,springboot,Micro-services
 AWS,project
 duration -18weeks
 ------------------------------------------------------------
+https://github.com/sandipmohapatra/Batch69
+-------------------------------------------------------------
+Java 1.8 features
+---------------------------
+1)Java is a Object Oriented Programming language.
+2)Java is simpler than c and c++ as we don't have pointer concept,Multiple Inheritance,operator overloading.
+3)Java supports multi-threading or multi-tasking.
+4)We can develop web-application,network application,standalone application and also mobile application.
+5)In java we have interface which support the concept of multiple inheritance.
+6)In java we have constructor but no destructor.There is automatic garbage clearance.
+7)Java is a secured language.We have 4 access specifier private,public,protected and default.
+------------------------------------------------------------------------------ 

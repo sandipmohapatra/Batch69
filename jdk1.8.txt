@@ -52,3 +52,20 @@ we have 4 access specifier
 3)protected:-If we declare variable and methods as protected we can access it within the class and also within the child class.
 4)default:-If we declare variable and methods as default we can access it within the class ,outside the class but not outside the package.
 ----------------------------------------------------------------------------------------------
+example-1
+-----------------
+package org.sandip;
+
+public class FirstExample
+{
+public static void main(String[] args) 
+{
+	System.out.println("welcome to java at wipro");
+}
+}
+-----------------------------------------------------------------------
+
+
+
+
+

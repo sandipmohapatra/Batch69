@@ -77,5 +77,26 @@ int a=10,b=20,c=a+b;
 }
 }
 --------------------------------------------------------------------------------
+example-3
+----------------
+package org.sandip;
+
+public class ThirdExample 
+{
+public static void main(String[] args) {
+	byte a=10;
+	short b=20;
+	int c=30;
+	long d=40;
+	float e=34.56f;
+	double f=45.34;
+	String g="apple";
+	char h='a';
+	System.out.println(a+" "+b+"  "+c);
+	System.out.println(d+" "+e+"  "+f);
+	System.out.println(g+" "+h);
+	}
+}
+---------------------------------------------------------------------------------
 
 

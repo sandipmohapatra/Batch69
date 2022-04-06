@@ -98,5 +98,23 @@ public static void main(String[] args) {
 	}
 }
 ---------------------------------------------------------------------------------
-
+example-4
+-------------------
+package org.sandip;
+import java.util.*;
+public class FourthExample 
+{
+	public static void main(String[] args)
+	{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter your slno,name,address");
+	int slno=ob.nextInt();
+	String name=ob.next();
+	String address=ob.next();
+	System.out.println("The slno is "+slno);
+	System.out.println("The name is "+name);
+	System.out.println("The address is "+address);
+		}
+}
+----------------------------------------------------------------------
 

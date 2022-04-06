@@ -158,7 +158,28 @@ System.out.println("the average of 5 nos "+avg);
 }
 }
 ---------------------------------------------------------------------
-
+example-7
+---------------------
+package org.sandip;
+import java.util.*;
+public class FourthExample 
+{
+	public static void main(String[] args)
+	{
+	Scanner ob=new Scanner(System.in);
+System.out.println("enter 5 nos");
+float a=ob.nextFloat();
+float b=ob.nextFloat();
+float c=ob.nextFloat();
+float d=ob.nextFloat();
+float e=ob.nextFloat();
+float sum=a+b+c+d+e;
+float avg=(int)sum/5;
+System.out.println("the sum is 5 nos "+sum);
+System.out.println("the average of 5 nos "+avg);
+}
+}
+-----------------------------------------------------------------------------------
 
 
 

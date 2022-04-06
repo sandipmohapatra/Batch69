@@ -1,0 +1,7 @@
+core-java
+html,css,javascript,Bootstrap,Jquery,Angular10
+Oracle,mysql,mongodb,JDBC,Hibernate
+spring,springboot,Micro-services
+AWS,project
+duration -18weeks
+------------------------------------------------------------

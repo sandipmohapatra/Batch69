@@ -264,6 +264,65 @@ System.out.println();
 }
 }
 -----------------------------------------------------------------------------------------------
+class and Object:-
+---------------------------
+class :- It is a collection of data members and member functions.
+It is a blue print of an Object.
+It is also called as an Object factory.
+-----------------
+Object is an ref pointer to the class.
+We can access variables and methods of a class by using an Object.
+--------------------------------------------------------
+example-11
+------------------
+package org.sandip;
+import java.util.*;
+public class Student 
+{
+int rollno;//instance variable and can be accessed all over the program
+String name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name,address");
+	rollno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args)
+{
+Student ob=new Student();//Student is the class,ob is the object,new to create memory block,student() is a constructor
+ob.input();
+ob.display();
+}
+}
+--------------------------------------------------------------------------
+when we close the program the data are send to grabage clearance.
+There is no destructor in java .There is automatic garbage clearance.
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

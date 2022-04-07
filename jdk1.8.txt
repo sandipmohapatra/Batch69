@@ -345,7 +345,55 @@ public static void main(String[] args) {
 }
 }
 --------------------------------------------------------------
-
+example-13
+---------------------
+wap to enter student's data
+rollno,name,address,phy,chem,bio marks
+find the total,avg,and grade of the student.
+-----------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class StudentData 
+{
+	int rollno,phy,chem,bio,tot,avg;
+	String name,address,grade;
+	void input()
+	{
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter rollno,name and address");
+		rollno=ob.nextInt();
+		name=ob.next();
+		address=ob.next();
+		System.out.println("enter phy,chem,bio marks");
+		phy=ob.nextInt();
+		chem=ob.nextInt();
+		bio=ob.nextInt();
+		tot=phy+chem+bio;
+		avg=tot/3;
+			}
+	void display()
+	{
+		System.out.println("The rollno is "+rollno);
+		System.out.println("The name is "+name);
+		System.out.println("The address is "+address);
+		System.out.println("The total is "+tot);
+		System.out.println("The average is "+avg);
+		if(avg>=70)
+			System.out.println("First Division");
+		else if(avg>=60)
+			System.out.println("Second Division");
+		else if(avg>=50)
+			System.out.println("Third Division");
+		else 
+			System.out.println("fail");
+				}
+public static void main(String[] args) {
+	StudentData ob=new StudentData();
+	ob.input();
+	ob.display();
+}
+}
+------------------------------------------------------------------------------------------
 
 
 

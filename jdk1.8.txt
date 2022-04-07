@@ -311,9 +311,40 @@ step 2:- main
 step 3:- creating object
 step 4:- accessing variables and methods.
 ---------------------------------------------------------------------------
-
-
-
+wap to enter an employee data
+and display it.
+empno,name,address,salary.
+----------------------------------------------------
+Example-12
+------------------
+package org.sandip;
+import java.util.*;
+public class Employee 
+{
+int empno;
+String name,address;
+float salary;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,address,salary");
+	empno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+	salary=ob.nextFloat();
+}
+void display()
+{
+	System.out.println("the empno is "+empno+"The name is "+name);
+	System.out.println("the address is "+address+"The salary is "+salary);
+	}
+public static void main(String[] args) {
+	Employee ob=new Employee();
+	ob.input();
+	ob.display();
+}
+}
+--------------------------------------------------------------
 
 
 

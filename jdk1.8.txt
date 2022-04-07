@@ -174,13 +174,41 @@ float c=ob.nextFloat();
 float d=ob.nextFloat();
 float e=ob.nextFloat();
 float sum=a+b+c+d+e;
-float avg=(int)sum/5;
+float avg=(int)sum/5;//type casting
 System.out.println("the sum is 5 nos "+sum);
 System.out.println("the average of 5 nos "+avg);
 }
 }
 -----------------------------------------------------------------------------------
+Single dimentional array
+double dimentional array
+class and Object
+constructor
+Inheritance
+poly-merphisim
+Abstraction
+Encapsulation
+-------------------------------------------------------
+ Example-8
+-----------------
+package org.sandip;
+import java.util.*;
+public class SingleDimention 
+{
+public static void main(String[] args) 
+{
+int a[]=new int[5];
+System.out.println("Enter 5 nos");
+Scanner ob=new Scanner(System.in);
+for(int i=0;i<5;i++)                                    //array index start from 0
+	a[i]=ob.nextInt();
 
+System.out.println("5 nos are");
+for(int i=0;i<5;i++)
+System.out.println(a[i]);
+}
+}
+-----------------------------------------------------
 
 
 

@@ -209,7 +209,61 @@ System.out.println(a[i]);
 }
 }
 -----------------------------------------------------
+Example-9
+------------------
+package org.sandip;
+import java.util.*;
+public class SingleDimention 
+{
+public static void main(String[] args) 
+{
+int a[]=new int[5];
+int sum=0;
+System.out.println("Enter 5 nos");
+Scanner ob=new Scanner(System.in);
+for(int i=0;i<5;i++)
+a[i]=ob.nextInt();
 
+System.out.println("5 nos are");
+for(int i=0;i<5;i++)
+sum=sum+a[i];
+System.out.println("The sum of 5 nos is "+sum);
+}
+}
+---------------------------------------------------------------------------
+Example-10
+----------------------
+double dimentional array
+----------------------------------
+package org.sandip;
+import java.util.*;
+public class DoubleDimention 
+{
+public static void main(String[] args) 
+{
+int a[][]=new int[3][3];
+Scanner ob=new Scanner(System.in);
+System.out.println("enter 3*3 matrix");
+for(int i=0;i<3;i++)  //outer loop exceute for 1 time
+{
+	for(int j=0;j<3;j++)     //inner loop execute for 3 times
+	{
+		a[i][j]=ob.nextInt();   //00,01,02,--10,11,12,--20,21,22
+	}
+}
+
+System.out.println(" 3*3 matrix is");
+for(int i=0;i<3;i++)
+{
+	for(int j=0;j<3;j++)
+	{
+		System.out.print(a[i][j]+"  ");
+}
+System.out.println();
+}
+}
+}
+-----------------------------------------------------------------------------------------------
 
 
 

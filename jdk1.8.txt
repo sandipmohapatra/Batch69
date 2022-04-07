@@ -306,7 +306,11 @@ ob.display();
 when we close the program the data are send to grabage clearance.
 There is no destructor in java .There is automatic garbage clearance.
 -------------------------------------------------------------------------------------------
-
+step 1:- class declaration
+step 2:- main
+step 3:- creating object
+step 4:- accessing variables and methods.
+---------------------------------------------------------------------------
 
 
 

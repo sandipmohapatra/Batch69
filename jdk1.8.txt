@@ -531,6 +531,45 @@ public static void main(String[] args)
 		}
 }
 ---------------------------------------------------------------------------------
+wap to enter an employee data and display it using constructor
+empno,name,salary,designation
+-------------------------------------------------------------------------------
+example-17
+------------------
+package org.sandip;
+import java.util.*;
+public class ConstructorDemo 
+{
+int empno;
+String name,address,design;
+float salary;
+public ConstructorDemo(int empno, String name, String address, String design, float salary) {
+	this.empno = empno;
+	this.name = name;
+	this.address = address;
+	this.design = design;
+	this.salary = salary;
+}
+void display()
+{
+	System.out.println("the empno is "+empno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address+"The design is "+design);
+	System.out.println("the salary is "+salary);
+	}
+public static void main(String[] args) 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,address,design,salary");
+	int empno=ob.nextInt();
+	String name=ob.next(), address=ob.next(), design=ob.next();
+	float salary=ob.nextFloat();
+	
+	ConstructorDemo ob1=new ConstructorDemo(empno, name, address, design, salary);
+	ob1.display();
+}
+}
+--------------------------------------------
 
 
 

@@ -570,6 +570,71 @@ public static void main(String[] args)
 }
 }
 --------------------------------------------
+getter and setter
+getter is used to get the value
+setter is used to set the value.
+Example-18
+-------------------------
+package org.sandip;
+
+public class SetterGetter
+{
+int empno;
+String name,address,design;
+float salary;
+public int getEmpno() {
+	return empno;
+}
+public void setEmpno(int empno) {
+	this.empno = empno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAddress() {
+	return address;
+}
+public void setAddress(String address) {
+	this.address = address;
+}
+public String getDesign() {
+	return design;
+}
+public void setDesign(String design) {
+	this.design = design;
+}
+public float getSalary() {
+	return salary;
+}
+public void setSalary(float salary) {
+	this.salary = salary;
+}
+
+
+}
+---------------------------------------------------
+package org.sandip;
+
+public class SetGetMain 
+{
+public static void main(String[] args) {
+	SetterGetter ob=new SetterGetter();
+	ob.setEmpno(101);
+	ob.setName("sandip");
+	ob.setDesign("Worker");
+	ob.setAddress("Bangalore");
+	ob.setSalary(76000);
+	System.out.println("the empno is "+ob.getEmpno());
+	System.out.println("the name is "+ob.getName());
+	System.out.println("the Designation is "+ob.getDesign());
+	System.out.println("the address is "+ob.getAddress());
+	System.out.println("the salary is "+ob.getSalary());
+	}
+}
+----------------------------------------------------------------------------------
 
 
 

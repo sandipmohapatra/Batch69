@@ -394,7 +394,84 @@ public static void main(String[] args) {
 }
 }
 ------------------------------------------------------------------------------------------
-
+wap to enter your name,age,nationality and find if you are eligible to vote.
+use class and object.
+----------------------------------------------------------------------------------------------
+wap to create a bank class.
+enter accno,name,balance.
+do some transaction (withdraw or deposite)
+and display the final balance.
+===================================================================
+Example-14
+-------------------------------------
+package org.sandip;
+import java.util.*;
+public class BankDemo 
+{
+int accno;
+String name;
+float bal;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter accno,name,balance");
+	accno=ob.nextInt();
+	name=ob.next();
+	bal=ob.nextFloat();
+}
+void display()
+{
+	System.out.println("the accno is "+accno);
+	System.out.println("the name is "+name);
+	System.out.println("the balance is "+bal);
+	}
+float deposite()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter the amount you want to deposite");
+	int tot=ob.nextInt();
+	bal=bal+tot;
+	return bal;
+	}
+float withdraw()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter the amount you want to withdraw");
+	int draw=ob.nextInt();
+	if(bal>=draw+1000)  
+	{
+		bal=bal-draw;
+		return bal;
+	}
+	else
+	{
+		System.out.println("Your Balance is low");
+	}
+	return bal;
+}
+public static void main(String[] args) 
+{
+BankDemo ob=new BankDemo();
+Scanner ob1=new Scanner(System.in);
+System.out.println("Do you want to do transaction 1.deposite 2.withdraw");
+int choice=ob1.nextInt();
+switch(choice)
+{
+case 1:
+	ob.input();
+	ob.display();
+	System.out.println("The total balance is "+ob.deposite());
+	break;
+case 2:
+	ob.input();
+	ob.display();
+	System.out.println("The total balance is "+ob.withdraw());
+	break;
+default:System.out.println("wrong input");
+	}
+}
+}
+--------------------------------------------------------------------
 
 
 

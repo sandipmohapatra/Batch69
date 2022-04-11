@@ -692,7 +692,55 @@ public static void main(String[] args)
 	}
 }
 --------------------------------------------------------------------
+example-1
+-----------------
+package org.inheritance;
 
+public class Student 
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) {
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+
+
+void display()
+{
+	System.out.println("The rollno is "+rollno);
+	System.out.println("The name is "+name);
+	System.out.println("The address is "+address);
+	}
+}
+-----------------------------------------------
+package org.inheritance;
+
+public class Marks extends Student
+{
+int phy,chem,maths;
+
+public Marks(int rollno, String name, String address, int phy, int chem, int maths) 
+{
+	super(rollno, name, address);
+	this.phy = phy;
+	this.chem = chem;
+	this.maths = maths;
+}
+void display()
+{
+	super.display();
+	System.out.println("the phy marks is "+phy+"the chem marks is "+chem+"the maths marks is "+maths);
+	System.out.println("The total is "+(phy+chem+maths));
+	System.out.println("The avg is "+(phy+chem+maths)/3);
+	}
+public static void main(String[] args) {
+	Marks ob=new Marks(101,"sandip","hyd",77,55,56);
+	ob.display();
+}
+}
+----------------------------------------------------------------------------------------------------------
 
 
 

@@ -803,10 +803,69 @@ public static void main(String[] args)
 	emp.display();
 }
 }
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
+----------------------------------------------
+Example for HAS-A relationship 
+-----------------------------------------------
+package inheritence;
 
+public class Customerbuy {
+String name,address,email;
+String phno;
+Productbuy productbuy;
+public Customerbuy(String name, String address, String email, String phno,Productbuy productbuy)
+{
+	this.name = name;
+	this.address = address;
+	this.email = email;
+	this.phno = phno;
+	this.productbuy=productbuy;
+}
+void display()
+{
+	 System.out.println("Customer name is "+name);
+	 System.out.println("Customer adress is "+address);
+	 System.out.println("Customer email is "+email);
+	 System.out.println("Customer phone no is "+phno);
+	 System.out.println("Product details bought by customer is "+productbuy);
+	}
+}
+---------------------------------------------------------------------
 
+package inheritence;
+
+public class Productbuy {
+ int productid;
+ String name,dateofdel;
+ float price;
+public Productbuy(int productid, String name, String dateofdel, float price) {
+	this.productid = productid;
+	this.name = name;
+	this.dateofdel = dateofdel;
+	this.price = price;
+}
+@Override
+public String toString() {
+	return "Productbuy [productid=" + productid + ", name=" + name + ", dateofdel=" + dateofdel + ", price=" + price
+			+ "]";
+}
+
+}
+--------------------------------------------------------------------
+
+package inheritence;
+
+public class Mainbuy {
+	public static void main(String[] args) {
+		
+	
+	Productbuy p=new Productbuy(199,"sugar","11/4/2022",200);
+	Customerbuy c=new Customerbuy("siva","vizag","siva123@gmail.com","9999922222",p);
+	c.display();
+}
+}
+------------------------------------------------------------------------------
 
 
 

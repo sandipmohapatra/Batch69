@@ -741,10 +741,69 @@ public static void main(String[] args) {
 }
 }
 ----------------------------------------------------------------------------------------------------------
+wap to create Bank class (accno,name,balance)
+Create customer class (custid,name,address)
 
+Customer class extends Bank class.
+-----------------------------------------------------------------------
+Is-a relationship is tight coupling where as Has-a relationship is a loose coupling.
+----------------------------------------------------------------------------
 
+example-1
+-------------------
+package org.inheritance;
 
+public class Employee {
+int empno;
+String name,email;
+Address address;
+public Employee(int empno, String name, String email, Address address) {
+	this.empno = empno;
+	this.name = name;
+	this.email = email;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("the empno is "+empno);
+	System.out.println("the name is "+name);
+	System.out.println("the empno is "+email);
+	System.out.println("the empno is "+address);
+	}
+}
+-----------------------------------------
+package org.inheritance;
 
+public class Address 
+{
+int roadno,streetno;
+String houseno,loc,city;
+public Address(int roadno, int streetno, String houseno, String loc, String city) {
+	this.roadno = roadno;
+	this.streetno = streetno;
+	this.houseno = houseno;
+	this.loc = loc;
+	this.city = city;
+}
+@Override
+public String toString() 
+{
+	return "Address [roadno=" + roadno + ", streetno=" + streetno + ", houseno=" + houseno + ", loc=" + loc + ", city="
+			+ city + "]";
+}}
+----------------------------------------------------------------------------------------
+package org.inheritance;
+
+public class MainClass 
+{
+public static void main(String[] args)
+{
+	Address add=new Address(10,20,"b/123","MG road","bangalore");
+	Employee emp=new Employee(101,"sandip","sandip@gmail.com",add);
+	emp.display();
+}
+}
+-------------------------------------------------------------------------------
 
 
 

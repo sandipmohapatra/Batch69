@@ -804,13 +804,129 @@ public static void main(String[] args)
 }
 }
 -------------------------------------------------------------------------------
+wap to create class product(productid,name,price,date of delivery)
+create class customer(name,address,email,phoneno,product)
+customer buys a product
+-------------------------------------------------------------------------------
+Polymorphism
+Abstract
+Interface
+static
+final
+------------------------------------
+There are 2 types of polymorphism
+1)Compile time polymorphism:- Method overloading .We can do it in single class.
+In this the method name is same but the return type and parameter has different data type.
+example:-
+int sum(int a,int b);
+float sum(float a,float b);
+---------------------------------------------------------------------------
+2)runtime polymorphism :- Method overridding
+we have to use 2 or more class .use the inheritance .
+example :- abstract class,interface.
+---------------------------------------------------------
+example-1
+package org.test;
 
+public class Overlod 
+{
+int sum(int a,int b)
+{
+	return a+b;
+}
+float sum(float a,float b)
+{
+	return a+b;
+}
+double sum(double a,double b)
+{
+	return a+b;
+}
+float sum(int a,float b)
+{
+	return a+b;
+}
+public static void main(String[] args) {
+	Overlod ov=new Overlod();
+	System.out.println("The sum is :"+ov.sum(6,7));	
+	System.out.println("The sum is :"+ov.sum(6.5f,7.5f));
+	System.out.println("The sum is :"+ov.sum(16,17));
+	System.out.println("The sum is :"+ov.sum(6.5,7.7));
+	System.out.println("The sum is :"+ov.sum(62,1.7f));
+}
+}
+------------------------------------------------------------------------------------- 
+Method Overriding :- Runtime polymerphism
+-------------------------------------------------------
+example-1
+---------------
+package org.test;
 
+class Overridding1 
+{
+	void display()
+	{
+		System.out.println("This is a parent class");
+	}
+}
+	public class Overridding extends Overridding1
+	{
+		void display()
+		{
+			System.out.println("This is a child class");
+		}
+		public static void main(String[] args) 
+		{
+			Overridding ob=new Overridding();
+			ob.display();
+		}
+}
+------------------------------------------------
+Here in the parent class we have the display method().
+In the child class we have the display method().we create object of the child class.
+The child class display is overridding on the parent class display|() .The parent class display() is hidden.
+  
+Abstact class
+----------------------
+It is a class which contain abstract methods means method without body.
+It can also contain method with body known as concret method.
+We cannot create object of the abstract class.we can have constructor in the abstract method.
+we have to inherite it into a child class where we have to override the abstract methods.
+Then we create object for the child class.
+In java we cannot  have a method without body .we have to declare it as abstract or it should be inside the interface.
+--------------------------------------------------------------------- 
+example-1
+-------------------
+package org.test;
 
-
-
-
-
+abstract class AbstractDemo1 
+{
+	AbstractDemo1 ()
+	{
+		System.out.println("This is a constructor");
+	}
+	abstract void display();
+	int sum(int a,int b)
+	{
+		return a+b;
+	}
+}
+	class AbstractDemo extends  AbstractDemo1 
+	{
+		@Override
+		void display()
+		{
+					System.out.println("This is a override method");	
+		}
+		public static void main(String[] args) 
+		{
+			AbstractDemo ob=new AbstractDemo();
+			System.out.println("The sum is "+ob.sum(5,6));
+			ob.display();
+		}
+	
+}
+---------------------------------------------------
 
 
 

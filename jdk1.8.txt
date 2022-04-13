@@ -975,6 +975,76 @@ case 4:
 }
 }
 -----------------------------------------------------------------------------------------
+Interface:-
+It is similar to abstract class but it only contains abstract methods no concrete methods.we don't use the keyword abstract in this.
+We cannot create object for an interface.
+We have to implement the interface into a child class.
+We have to override the abstract methods into a child class and create object for the child class.
+An interface can extend a interface.
+By interface java performs the multiple inheritance.
+we can declare a variable inside a interface  . This is by default static and final.
+static variables can be accessed without an object and final variable has to be assigned and cannot be changed.
+--------------------------------------------------------------------------------------
+A class can extend a class (inheritance)
+An interface can extend a interface (inheritance)
+A class can implement a interface or multiple interface known as multiple inheritance.(inheritance).It will inherite the abstract methods.
+--------------------------------------
+example-1
+-------------------
+package org.switchDemo;
+
+interface Interface1 
+{
+void display1();
+}
+
+interface Interface2 
+{
+void display2();
+}
+
+interface Interface3 extends Interface2  
+{
+void display3();
+}
+
+public class InterfaceDemo implements Interface1,Interface3
+{
+
+	@Override
+	public void display2() {
+	System.out.println("Display2");
+		}
+
+	@Override
+	public void display3() {
+		System.out.println("Display3");
+			}
+
+	@Override
+	public void display1() {
+		System.out.println("Display1");
+	}
+	public static void main(String[] args) {
+		InterfaceDemo id=new InterfaceDemo();
+		id.display1();
+		id.display2();
+		id.display3();
+	}
+}
+----------------------------------------------------------------------------------------
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

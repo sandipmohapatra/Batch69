@@ -1110,6 +1110,35 @@ staticDemo.display();
 }
 }
 ----------------------------------------------------------------------------
+package org.switchDemo;
+import java.util.*;
+public class staticDemo
+{
+	
+static int rollno=101;
+static String name="sandip";
+static String address="Bangalore";
+static void display()
+{
+	System.out.println("this is static display");
+}
+static
+{
+	System.out.println("This is static block");
+}
+public static void main(String[] args) {
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name and address");
+	rollno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+	System.out.println("The rollno is "+rollno);
+	System.out.println("The name is "+name);
+	System.out.println("The address is "+address);
+	display();
+}
+}
+-------------------------------------------------------
 
 
 

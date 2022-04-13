@@ -1097,6 +1097,19 @@ public static void main(String[] args) {
 }
 }
 -----------------------------------------------------------------------
+package org.switchDemo;
+
+public class Static1 
+{
+public static void main(String[] args)
+{
+System.out.println(staticDemo.rollno);
+System.out.println(staticDemo.name);
+System.out.println(staticDemo.address);
+staticDemo.display();
+}
+}
+----------------------------------------------------------------------------
 
 
 

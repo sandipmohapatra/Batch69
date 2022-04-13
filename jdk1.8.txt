@@ -1033,8 +1033,36 @@ public class InterfaceDemo implements Interface1,Interface3
 	}
 }
 ----------------------------------------------------------------------------------------
-  
+  wap to create 3 interface and write add function for int,float,double in the 3 interfaces respectively.
+create a child class and implement it. 
+ --------------------------------------------------------------------------------------------------
+Example-2
+----------------
+package org.switchDemo;
 
+interface Interface1 
+{
+	 int a = 10;//the variable is bydefault static and final
+void display1();
+}
+
+
+public class InterfaceDemo implements Interface1
+{
+
+	
+	@Override
+	public void display1() {
+		System.out.println("Display1");
+	}
+	public static void main(String[] args) {
+		InterfaceDemo id=new InterfaceDemo();
+		id.display1();
+		
+		System.out.println("The value of a is "+a);
+	}
+}
+---------------------------------------------------------------------------------------------
 
 
 

@@ -1,6 +1,3 @@
-sandip7760213015@gmail.com
-
-
 core-java
 html,css,javascript,Bootstrap,Jquery,Angular10
 Oracle,mysql,mongodb,JDBC,Hibernate
@@ -930,6 +927,54 @@ abstract class AbstractDemo1
 	
 }
 ---------------------------------------------------
+wap to create a abstract class bank
+having 2 abstract method deposite() and withdraw()
+display some message iin the 2 methods after overriding it.
+
+-----------------------------------------------------------------------
+Assignment-1
+--------------------------------------------------------------------------
+using case and switch create a calculator
+1.add
+2.sub
+3.mul
+4.div
+----------------------------------------------------------------------
+package org.switchDemo;
+import java.util.*;
+public class CaseAndSwitch 
+{
+public static void main(String[] args)
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter your choice 1.add 2.sub 3.mul 4.div");
+int c=ob.nextInt();
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+switch(c)
+{
+case 1:
+	int sum=a+b;
+System.out.println("The sum is "+sum);
+	break;
+case 2:
+	int sub=a-b;
+	System.out.println("The sub is "+sub);
+	break;
+case 3:
+	int mul=a*b;
+	System.out.println("The mul is "+mul);
+	break;
+case 4:
+	int div=a+b;
+	System.out.println("The  div is "+div);
+	break;
+	default:System.out.println("Wrong Input");
+}
+}
+}
+-----------------------------------------------------------------------------------------
 
 
 

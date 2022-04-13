@@ -1,3 +1,6 @@
+sandip7760213015@gmail.com
+
+
 core-java
 html,css,javascript,Bootstrap,Jquery,Angular10
 Oracle,mysql,mongodb,JDBC,Hibernate

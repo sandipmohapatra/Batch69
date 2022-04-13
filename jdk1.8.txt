@@ -1063,8 +1063,40 @@ public class InterfaceDemo implements Interface1
 	}
 }
 ---------------------------------------------------------------------------------------------
+static :-
+We can declare a variable as static ,method as static ,we can have static block and we can have static class.
+we can access static variable ,method,block,class without creating an object.
+We can also access itt with the help of class name.
+A single copy of static variable ,method,block,class  is created in thge JVM.
+It is used for memory management.
+A static block execute before the main method.
+-----------------------------------------------------------------------------------------------
+main method is also static so it can execute without creating an object.
 
+example:-
+package org.switchDemo;
 
+public class staticDemo
+{
+static int rollno=101;
+static String name="sandip";
+static String address="Bangalore";
+static void display()
+{
+	System.out.println("this is static display");
+}
+static
+{
+	System.out.println("This is static block");
+}
+public static void main(String[] args) {
+	System.out.println("The rollno is "+rollno);
+	System.out.println("The name is "+name);
+	System.out.println("The address is "+address);
+	display();
+}
+}
+-----------------------------------------------------------------------
 
 
 

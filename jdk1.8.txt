@@ -1211,27 +1211,37 @@ String s1="apple"; //when the 2 variables have the same value then the string po
 String s2="apple";//variable .the pointer pointing to s1 will also point to s2.so s1 and s2 has same hashcode()
 String s3=new String("apple");
 String s4=new String("apple");
-if(s1==s2)
+if(s1==s2)----------------------------------------------1
 	System.out.println("true");
 else
 	System.out.println("false");
-if(s1==s3)
+if(s1==s3)-----------------------------------------------2
 	System.out.println("true");
 else
 	System.out.println("false");
-if(s4==s3)
+if(s4==s3)-----------------------------------------------3
 	System.out.println("true");
 else
 	System.out.println("false");
-if(s4.equals(s3))
+if(s4.equals(s3))------------------------------------------4
 	System.out.println("true");
 else
 	System.out.println("false");
 }
 }
 ---------------------------------------------------------------------------------------
-
-
+In the first case it displays true because it compares the hashcode or memory location.
+String doesnot create a new memory block when a same string is assigned to two different variables.
+so the momory location is same for both the strings.
+-------------------------------------------------------------------------------------------------------------------
+In the second case we use new keyword then a new memory block is created.
+so it returns false.
+---------------------------------------------------------------------------------
+In the third case both are having new keyword so two new memory blocks are created.
+it will return false.
+---------------------------------------------------------------------------------- 
+In the forth case it is true because there is a string comparition.
+-------------------------------------------------------------------------------------------
 
 
 

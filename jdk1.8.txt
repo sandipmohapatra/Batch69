@@ -1242,8 +1242,103 @@ it will return false.
 ---------------------------------------------------------------------------------- 
 In the forth case it is true because there is a string comparition.
 -------------------------------------------------------------------------------------------
+String is immutable (can not be changed)
+-------------------------------------------------------------------
+Example-2
+----------------------
+package org.switchDemo;
 
+public class StringDemo2
+{
+public static void main(String[] args) 
+{
+String s1="Wipro Software Solution";
+String s2="WiprO Software Solution";
+System.out.println("the string is "+s1);
+System.out.println("the upper case string is "+s1.toUpperCase());
+System.out.println("the lower case string is "+s1.toLowerCase());
+System.out.println("the indexOf string is "+s1.indexOf("W"));
+System.out.println("the indexOf string is "+s1.indexOf("i"));
+System.out.println("the indexOf string is "+s1.lastIndexOf("S"));
+System.out.println("the equal string is "+s1.equals(s2));
+System.out.println("the equal string is "+s1.equalsIgnoreCase(s2));
+System.out.println("the substring is "+s1.substring(1));
+System.out.println("the substring is "+s1.substring(0,5));
+System.out.println("the charAt is "+s1.charAt(1));
+System.out.println("the charAt is "+s1.charAt(0));
+System.out.println("the startswith is "+s1.startsWith("Wipro"));
+System.out.println("the endswith is "+s1.endsWith("Solution"));
+System.out.println("the length is "+s1.length());
+char x[]=s1.toCharArray();
+int len=x.length;
+for(int i=0;i<len;i++)
+System.out.println(x[i]);
+}
+}
+--------------------------------------------------------------------------
+example-3
+----------------------------
+to check the string is a palindrom or not
+-------------------------------------------------------
+package org.switchDemo;
 
+public class StringDemo3
+{
+public static void main(String[] args) 
+{
+String s1="Madam";
+String s2="Radar";
+String rev="";
+int str=s1.length();
+System.out.println("the length is "+str);
+for(int i=(str-1);i>=0;--i)
+	rev=rev+s1.charAt(i);
+System.out.println(rev);
+
+if(s1.toLowerCase().equals(rev.toLowerCase()))
+{
+	System.out.println("string is palindrom");
+}
+else
+{
+	System.out.println("string is not palindrom");
+}
+}
+}
+-----------------------------------------------------------------------------------
+StringBuffer :- It is muttable (can be changed)
+--------------------------------------------------------------------
+example-4
+-------------------------
+package org.switchDemo;
+
+public class StringDemo4
+{
+public static void main(String[] args) 
+{
+StringBuffer s1=new StringBuffer("My name ");
+StringBuffer s2=new StringBuffer("is Sandip ");
+StringBuffer s3=new StringBuffer(" I am 40 years old ");
+System.out.println(s1.append(s2));
+System.out.println(s1.length());
+System.out.println(s1);
+System.out.println(s1.append(s3));
+System.out.println(s1);
+s1.setCharAt(0, 'm');
+System.out.println(s1);
+System.out.println(s1.length());
+System.out.println(s1.insert(37,"I am a trainer"));
+System.out.println(s1.length());
+System.out.println(s1.delete(34,36));
+System.out.println(s1.reverse());
+System.out.println(s1);
+
+}
+}
+--------------------------------------------------------------
+String Buffer is synchronized
+String Builder is not synchronized
+----------------------------------------------------------------------
 
 
 

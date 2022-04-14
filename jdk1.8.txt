@@ -1139,7 +1139,42 @@ public static void main(String[] args) {
 }
 }
 -------------------------------------------------------
+wap to enter a product details using static variable and display it.
+productid,pname,price,munfacturedate;
 
+---------------------------------------------------------------------------------------
+example 2:-
+-----------------
+package org.switchDemo;
+
+public class StaticDemo1
+{
+static int a=10;//we cannot access a non-static variable inside a static method
+static int b=20;
+static void display()
+{
+	System.out.println("The value of a is "+ a);
+	System.out.println("the value of b is "+b);
+}
+void display1()//inside a non-static method we can access the static variable
+{
+	System.out.println("The value of a is "+ a);
+	System.out.println("the value of b is "+b);
+}
+public static void main(String[] args) {
+	display();
+	StaticDemo1 ob=new StaticDemo1();
+	ob.display1();
+}
+}
+------------------------------------------------------------------------------------
+
+
+
+
+
+String function
+-----------------------------------
 
 
 

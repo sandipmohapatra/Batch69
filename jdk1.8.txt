@@ -1192,7 +1192,44 @@ public static void main(String[] args)
 -------------------------------------------------------------------------------
 String function
 -----------------------------------
+String :- It is a derived datatype
+It is also a class in java.
+We have 3 similar classes.
+1)String--It is immutable(cannot be changed)
+2)StringBuffer --mutable(can be changed)
+3)StringBuilder --mutable(can be changed)
+-----------------------------------------------------------------
+example-1
+------------------
+package org.switchDemo;
 
+public class StringDemo1
+{
+public static void main(String[] args) 
+{
+String s1="apple"; //when the 2 variables have the same value then the string pool will not create a separate 
+String s2="apple";//variable .the pointer pointing to s1 will also point to s2.so s1 and s2 has same hashcode()
+String s3=new String("apple");
+String s4=new String("apple");
+if(s1==s2)
+	System.out.println("true");
+else
+	System.out.println("false");
+if(s1==s3)
+	System.out.println("true");
+else
+	System.out.println("false");
+if(s4==s3)
+	System.out.println("true");
+else
+	System.out.println("false");
+if(s4.equals(s3))
+	System.out.println("true");
+else
+	System.out.println("false");
+}
+}
+---------------------------------------------------------------------------------------
 
 
 

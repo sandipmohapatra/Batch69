@@ -49,9 +49,36 @@ public void testSquare()
 	assertEquals(36,ob.square(6));
 	
 }
-public void testAdd()
+@Test
+public void testOpt()
 {
 	assertEquals(25,ob.add(12, 13));
+	assertEquals(-1,ob.sub(12, 13));
+	assertEquals(25,ob.mul(5, 5));
+	assertEquals(5,ob.div(10, 2));
+	
 }
+@Test
+public void testString()
+{
+	String result=ob.concat("Hello ","student");
+	assertEquals("Hello student",result);
+}
+
+@Test
+public void testUser()
+{
+	assertEquals("sandip",ob.user("sandip"));
+
+}
+@Test
+public void compString()
+{
+	String s1="Hello";
+	String s2="Hello";
+	assertSame(s1,s2);
+}
+
+
 }
 ----------------------------------------------------------------------------

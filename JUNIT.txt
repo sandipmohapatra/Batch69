@@ -49,5 +49,9 @@ public void testSquare()
 	assertEquals(36,ob.square(6));
 	
 }
+public void testAdd()
+{
+	assertEquals(25,ob.add(12, 13));
+}
 }
 ----------------------------------------------------------------------------

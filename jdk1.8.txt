@@ -1339,6 +1339,45 @@ System.out.println(s1);
 String Buffer is synchronized
 String Builder is not synchronized
 ----------------------------------------------------------------------
+--------------------------------------------
+All the datatypes in java are also classes known as wrapper class.
+-----------------------------------------------------
+1)byte --java.lang.Byte----methods
+2)short --java.lang.Short----methods
+3)int --java.lang.Integer ---methods
+4)long --java.lang.Long ---methods
+5)float --java.lang.Float ---methods
+6)double --java.lang.Double ---methods
+7)boolean ---java.lang.Boolean ---methods
+8)char ---java.lang.Character ---methods
+9)String ---java.lang.String ---methods
+---------------------------------------------------------------
+final :- We can declare a class as final ,method as final and final variable.
+If we declare a class as final we cannot inherite it.
+If we declare a method as final we cannot override it.
+If we declare a variable as final we cannot change it.
+-----------------------------------------------
+example-1
+----------
+package org.sandip;
+public final  class FinalDemo 
+{
+final int a = 10;
+final void display()
+{
+	System.out.println(a);
+	System.out.println("This is a final method");
+}
+public static void main(String[] args) {
+	FinalDemo fd=new FinalDemo();
+	fd.display();
+}
+}
+------------------------------------
+
+
+
+
 
 
 

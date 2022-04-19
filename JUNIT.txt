@@ -122,8 +122,68 @@ public class Test1
 	}
 }
 --------------------------------------------------------------------------------------------------------------
+@BeforeClass  ----This will execute for one time.
 
+@Before
+@Test-------
+@After
 
+@Before
+@Test-------
+@After
+
+@Before
+@Test-------
+@After
+
+@AfterClass ----This will execute for one time.
+
+-----------------------------------------------------------------------------
+package org.sandip;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+public class Test2 
+{
+	Calculator ob=new Calculator();
+@BeforeClass
+public static void beforeclassSetup() throws Exception
+{
+	System.out.println("before class");
+}
+@Before
+public  void beforetestSetup() throws Exception
+{
+	System.out.println("before test");
+}
+@Test
+public void sumTest()
+{
+	assertEquals(10,ob.sum(4, 6));
+}
+
+@Test
+public void subTest()
+{
+	assertEquals(10,ob.sub(16, 6));
+}
+
+@AfterClass
+public static void afterclassSetup() throws Exception
+{
+	System.out.println("after class");
+}
+@After
+public  void aftertestSetup() throws Exception
+{
+	System.out.println("after test");
+}
+
+}
 
 
 

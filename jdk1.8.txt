@@ -1503,6 +1503,24 @@ for(int i=1;i<=10;i++)
 -----------------------------------------------------
 Throwable/Exception/InterruptedException
 --------------------------------------------------------------------
+throw :- It is used for user defined exception
+----------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class ExceptionDemo extends Thread
+{
+public static void main(String[] args) throws Throwable 
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter your age");
+int age=ob.nextInt();
+if(age>=18)
+	System.out.println("Eligible to vote");
+else
+	throw new Exception("You are not eligible to Vote");
+}
+}
+----------------------------------------------------
 
 
 

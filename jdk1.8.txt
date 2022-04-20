@@ -1374,6 +1374,31 @@ public static void main(String[] args) {
 }
 }
 ------------------------------------
+Exception Handling
+-------------------------------
+The main purpose of exception handling is to handle the error and allow the control to flow till the end of the program.
+It should display proper error message.
+There are 3 types of error.
+1)logical error and syntax error.:- It is due to wrong logic and wrong syntax .
+2)Runtime error:- It is due to wrong input during the runtime.example:- age you enter 20years inplace of 20.
+3)compile time error:- This is due to missing of semicolon or spelling mistake etc.
+-----------------------------------------------------
+we will be handling only runtime exception.
+logical ,syntax and compile time error we should handle manually.
+The runtime errors are 3 types
+1)checked exception :- SQLException,IOException,InterruptedException,...
+2)unchecked exception:-ArithmaticException,ArrayIndexOutOfBound,InputMisMatchException,...
+3)error :- harddisk crash,stack overFlow,etc...
+-----------------------------------------------------------------------------------------------
+we have 5 keywords
+1)try
+2)catch
+3)finally
+4)throws
+5)throw :- it is used for user defined exception
+
+---------------------------------------------
+
 
 
 

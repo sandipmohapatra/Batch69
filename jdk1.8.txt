@@ -1586,11 +1586,12 @@ public static void main(String[] args) {
 Abstraction:-(fan)Hiding the complexcity and displaying the simplicity.
 In methods we write complex algorithims but outside the class we access the methods using object.
 so the complex methods are hidden only the operations are visible to users.
-
+example-general class with mthods.
 ----------------------------------------------------
 Collection Framework
 -----------------------------------------------------
 We have array here the size of the array is fixed.
+Collection is a collection Object.
 example:- int a[]=new int[5]; <- Here the array size is fixed.
 But in collection the size is not fixed.
 It is dynamic .It expands as we enter the elements and decreases as we delete the elements.
@@ -1598,9 +1599,135 @@ We can perform operations on data like searching,sorting,insertion,manipulation 
 We have interfaces like Set,List,Map,Queue.
 -------------------------------------------------
 1)set(interface) :- It has classes like :- 1)TreeSet,2)HashSet,3)LinkedHashSet
+It will not allow duplicate records.
+1)HashSet --Displays elements in ramdom order.
+2)LinkedHashSet --Displays elements in same order.
+3)TreeSet---Displays elements in sorted order.
+-------------------------------------------------------------------------------------------
+Example-1(Display in sorted order)
+---------------------
+package org.sandip;
+import java.util.*;
+public class SetDemo 
+{
+	public static void main(String[] args) {
+		TreeSet<Integer>  ts=new TreeSet<Integer>();
+		ts.add(10);
+		ts.add(30);
+		ts.add(40);
+		ts.add(60);
+		ts.add(70);
+		ts.add(50);
+		ts.add(20);
+		ts.add(20);
+			System.out.println(ts);
+	}
 
+}
+------------------------------------------------------------------------------
+example-2(Display in random order)
+-------------------
+package org.sandip;
+import java.util.*;
+public class SetDemo 
+{
+	public static void main(String[] args) {
+		HashSet<Integer>  ts=new HashSet<Integer>();
+		ts.add(10);
+		ts.add(30);
+		ts.add(40);
+		ts.add(60);
+		ts.add(70);
+		ts.add(50);
+		ts.add(20);
+		ts.add(20);
+			System.out.println(ts);
+	}
 
+}
+----------------------------------------------------------------------
+Example-3(display in same order)
 
+package org.sandip;
+import java.util.*;
+public class SetDemo 
+{
+	public static void main(String[] args) {
+		LinkedHashSet<Integer>  ts=new LinkedHashSet<Integer>();
+		ts.add(10);
+		ts.add(30);
+		ts.add(40);
+		ts.add(60);
+		ts.add(70);
+		ts.add(50);
+		ts.add(20);
+		ts.add(20);
+			System.out.println(ts);
+	}
+}
+-----------------------------------------------------------------------------------------------------
+Example-4
+-------------------------
+package org.sandip;
+import java.util.*;
+public class SetDemo 
+{
+	public static void main(String[] args) {
+		TreeSet<String>  ts=new TreeSet<String>();
+		ts.add("Banana");
+		ts.add("Grapes");
+		ts.add("Orange");
+		ts.add("Water Melon");
+		ts.add("Apple");
+		ts.add("Tomato");
+		ts.add("Potato");
+		ts.add("egg");
+			System.out.println(ts);
+	}
+}
+----------------------------------------------------------------------------------------------------
+example-5
+----------------
+package org.sandip;
+import java.util.*;
+public class SetDemo 
+{
+	public static void main(String[] args) {
+		LinkedHashSet<Student>  ts=new LinkedHashSet<Student>();
+		
+		Student ob1=new Student(1,"sandip","bangalore");
+		Student ob2=new Student(2,"anil","bangalore");
+		Student ob3=new Student(3,"Manoj","bangalore");
+		Student ob4=new Student(4,"Jagdesh","bangalore");
+		
+		ts.add(ob1);
+		ts.add(ob2);
+		ts.add(ob3);
+		ts.add(ob3);
+		
+			System.out.println(ts);
+	}
+
+}
+-------------------------------------------------------
+package org.sandip;
+
+public class Student
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 

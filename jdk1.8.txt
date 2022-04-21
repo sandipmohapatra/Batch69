@@ -1520,8 +1520,84 @@ else
 	throw new Exception("You are not eligible to Vote");
 }
 }
-----------------------------------------------------
+---------------------------------------------------------------------------------------------
+encapsulation:-capsule (medicines are protected inside the capsule).
+we use private and protected access specifier to protect our data from being accessed from other classes.
+example:-
+//Encapsulation
+package org.sandip;
 
+public class SetterGetter
+{
+private int empno;//it can be accesses with in the class only.
+private String name,address,design;
+private float salary;
+public int getEmpno() {
+	return empno;
+}
+public void setEmpno(int empno) {
+	this.empno = empno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAddress() {
+	return address;
+}
+public void setAddress(String address) {
+	this.address = address;
+}
+public String getDesign() {
+	return design;
+}
+public void setDesign(String design) {
+	this.design = design;
+}
+float getSalary() {
+	return salary;
+}
+ void setSalary(float salary) {
+	this.salary = salary;
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+package org.sandip;
+
+public class SetGetMain 
+{
+public static void main(String[] args) {
+	SetterGetter ob=new SetterGetter();
+	ob.setEmpno(101);
+	ob.setName("sandip");
+	ob.setDesign("Worker");
+	ob.setAddress("Bangalore");
+	ob.setSalary(76000);
+	System.out.println("the empno is "+ob.getEmpno());
+	System.out.println("the name is "+ob.getName());
+	System.out.println("the Designation is "+ob.getDesign());
+	System.out.println("the address is "+ob.getAddress());
+	System.out.println("the salary is "+ob.getSalary());
+	}
+}
+--------------------------------------------------------------------------------------------------------------------
+Abstraction:-(fan)Hiding the complexcity and displaying the simplicity.
+In methods we write complex algorithims but outside the class we access the methods using object.
+so the complex methods are hidden only the operations are visible to users.
+
+----------------------------------------------------
+Collection Framework
+-----------------------------------------------------
+We have array here the size of the array is fixed.
+example:- int a[]=new int[5]; <- Here the array size is fixed.
+But in collection the size is not fixed.
+It is dynamic .It expands as we enter the elements and decreases as we delete the elements.
+We can perform operations on data like searching,sorting,insertion,manipulation ,deletion etc.
+We have interfaces like Set,List,Map,Queue.
+-------------------------------------------------
+1)set(interface) :- It has classes like :- 1)TreeSet,2)HashSet,3)LinkedHashSet
 
 
 

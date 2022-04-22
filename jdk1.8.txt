@@ -1592,6 +1592,7 @@ Collection Framework
 -----------------------------------------------------
 We have array here the size of the array is fixed.
 Collection is a collection Object.
+----------------------------------------------
 example:- int a[]=new int[5]; <- Here the array size is fixed.
 But in collection the size is not fixed.
 It is dynamic .It expands as we enter the elements and decreases as we delete the elements.

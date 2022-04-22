@@ -1797,7 +1797,7 @@ public static void main(String[] args) {
 for(Object obj:ts)
 	System.out.println(obj);
 System.out.println("******************************");
-Iterator itr=ts.iterator();
+Iterator itr=ts.iterator(); //Iterator is an interface
 while(itr.hasNext())
 {
 	System.out.println(itr.next());
@@ -1805,6 +1805,49 @@ while(itr.hasNext())
 		}
 }
 -----------------------------------------------------------------------------
+List :- It is a Interface
+It allows duplicate records.
+we have classes 1)Stack 2)ArrayList 3)LinkedList 4)Vector
+-----------
+stack :- First In Last Out
+example-9
+-------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo
+{
+public static void main(String[] args) {
+	Stack ts=new Stack();
+	ts.push(70);
+	ts.push(20);
+	ts.push(60);
+	ts.push(40);
+	ts.push(50);
+	ts.push(10);
+	ts.push(30);
+	System.out.println("The deleted item is "+ts.pop());
+	System.out.println("The view item is "+ts.peek());
+	System.out.println("The item present "+ts.search(40));
+	System.out.println("The item present "+ts.search(70));
+		for(Object obj:ts)
+	System.out.println(obj);
+		}
+}
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

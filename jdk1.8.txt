@@ -1728,7 +1728,35 @@ public String toString() {
 }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------
-
+Example-6
+--------------------
+package org.sandip;
+import java.util.TreeSet;
+public class TreeSetDemo
+{
+public static void main(String[] args) {
+	TreeSet ts=new TreeSet();
+	System.out.println(ts.isEmpty());
+	System.out.println(ts.size());
+	ts.add(70);
+	ts.add(20);
+	ts.add(60);
+	ts.add(40);
+	ts.add(50);
+	ts.add(10);
+	ts.add(30);
+	System.out.println(ts);
+	System.out.println(ts.isEmpty());
+	System.out.println(ts.size());
+	System.out.println(ts.contains(10));
+	System.out.println(ts.contains(100));
+	ts.clear();
+	System.out.println(ts);
+	System.out.println(ts.isEmpty());
+	System.out.println(ts.size());
+	}
+}
+------------------------------------------------------------------------------
 
 
 

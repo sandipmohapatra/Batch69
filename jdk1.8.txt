@@ -1918,9 +1918,101 @@ public static void main(String[] args) {
 		}
 }
 ------------------------------------------------------------------------
+Sorting a LinkedList
+------------------------------
+Example-12
+--------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo
+{
+public static void main(String[] args) {
+	LinkedList<Integer> ts=new LinkedList<Integer>();
+	ts.add(70);
+	ts.add(20);
+	ts.add(60);
+	ts.add(40);
+	ts.add(50);
+	ts.add(10);
+	ts.add(30);
+	Collections.sort(ts);
 
-
-
+	System.out.println("Forward Direction");
+	ListIterator li=ts.listIterator();
+	while(li.hasNext())
+	{
+		System.out.println(li.next());
+	}
+	System.out.println("Backward Direction");
+		while(li.hasPrevious())
+	{
+		System.out.println(li.previous());
+	}
+		}
+}
+---------------------------------------------------------------------------
+Example-13
+----------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo
+{
+public static void main(String[] args) {
+	LinkedList<Integer> ts=new LinkedList<Integer>();
+	ts.add(70);
+	ts.add(20);
+	ts.add(60);
+	ts.add(40);
+	ts.add(50);
+	ts.add(10);
+	ts.add(30);
+	Collections.sort(ts);
+	System.out.println("the largest no is :"+Collections.max(ts));
+	System.out.println("the samallest no is :"+Collections.min(ts));
+	System.out.println("Forward Direction");
+	ListIterator li=ts.listIterator();
+	while(li.hasNext())
+	{
+		System.out.println(li.next());
+	}
+	System.out.println("Backward Direction");
+		while(li.hasPrevious())
+	{
+		System.out.println(li.previous());
+	}
+		}
+}
+---------------------------------------------------------------------------------
+Example-14(hetro-genious data)
+-------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo
+{
+public static void main(String[] args) {
+	LinkedList ts=new LinkedList();
+	ts.add("apple");
+	ts.add(20);
+	ts.add("orange");
+	ts.add(40);
+	ts.add("Grapes");
+	ts.add(10);
+	ts.add("Banana");
+	
+	System.out.println("Forward Direction");
+	ListIterator li=ts.listIterator();
+	while(li.hasNext())
+	{
+		System.out.println(li.next());
+	}
+	System.out.println("Backward Direction");
+		while(li.hasPrevious())
+	{
+		System.out.println(li.previous());
+	}
+		}
+}
+----------------------------------------------------------------
 
 
 

@@ -1814,7 +1814,7 @@ example-9
 -------------------------
 package org.sandip;
 import java.util.*;
-public class TreeSetDemo
+public class StackDemo
 {
 public static void main(String[] args) {
 	Stack ts=new Stack();
@@ -1834,7 +1834,56 @@ public static void main(String[] args) {
 		}
 }
 -------------------------------------------------------------------
-
+LinkedList:-It will display the data in same order.
+-------------------------------------
+example-10
+-------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSetDemo
+{
+public static void main(String[] args) {
+	LinkedList<Integer> ts=new LinkedList<Integer>();
+	LinkedList<Integer> ts1=new LinkedList<Integer>();
+	ts.add(70);
+	ts.add(20);
+	ts.add(60);
+	ts.add(40);
+	ts.add(50);
+	ts.add(10);
+	ts.add(30);
+	
+	ts1.add(170);
+	ts1.add(120);
+	ts1.add(160);
+	ts1.add(140);
+	ts1.add(150);
+	ts1.add(110);
+	ts1.add(130);
+		for(Object obj:ts)
+	System.out.println(obj);
+		System.out.println("************************");
+		ts.forEach((x)->System.out.println(x));//jdk1.8 this for each was introduced
+		System.out.println("************************");
+		ts.addFirst(9);
+		ts.addLast(99);
+		System.out.println("************************");
+		ts.forEach((x)->System.out.println(x));//jdk1.8 this for each was introduced
+		System.out.println("************************");
+		ts.removeFirst();
+		ts.removeLast();
+		System.out.println("************************");
+		ts.forEach((x)->System.out.println(x));//jdk1.8 this for each was introduced
+		System.out.println("************************");
+		for(Object obj:ts1)
+			System.out.println(obj);
+		ts.addAll(ts1);
+		System.out.println("************************");
+		ts.forEach((x)->System.out.println(x));//jdk1.8 this for each was introduced
+		System.out.println("************************");
+		}
+}
+-------------------------------------------------------------------
 
 
 

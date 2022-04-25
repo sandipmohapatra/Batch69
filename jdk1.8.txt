@@ -2067,6 +2067,12 @@ System.out.println(hm);
 }
 ----------------------------------------------------------------------------------
 HashMap is converted to set because we don't have Iterator in HashMap.
+HashMap has a method called entrySet() for converting HashMap to Set.
+ie:- Set st=hm.entrySet();
+We are using 3 Interfaces 1)Set for Iterator which has 2 methods 1)hasnext() and 2)next();
+Map.Entry for 2 methods getKey() and getValue()
+------------------------------------------------------------------------ 
+
 Set st=hm.entrySet();
 Iterator itr=st.iterator();
 while(itr.hasNext())

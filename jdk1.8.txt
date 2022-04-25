@@ -2066,9 +2066,47 @@ System.out.println(hm);
 }
 }
 ----------------------------------------------------------------------------------
-
-
-
+HashMap is converted to set because we don't have Iterator in HashMap.
+Set st=hm.entrySet();
+Iterator itr=st.iterator();
+while(itr.hasNext())
+{
+Map.Entry en=(Map.Entry)itr.next();
+System.out.println(en.getKey()+"  "+en.getValue());
+}
+---------------------------------------
+Example-3
+-----------------
+package org.sandip;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap<Integer, String> hm=new HashMap<Integer, String>();
+hm.put(1, "sandip");
+hm.put(2, "anil");
+hm.put(3, "Ankur");
+hm.put(4, "Sunil");
+hm.put(5, "Sai");
+hm.put(6, "Mohit");
+hm.put(7, "Shiv");
+Scanner ob=new Scanner(System.in);
+System.out.println("enter rollno and name");
+int rollno=ob.nextInt();
+String name=ob.next();
+hm.put(rollno, name);
+System.out.println(hm);
+Set st=hm.entrySet();
+Iterator itr=st.iterator();
+while(itr.hasNext())
+{
+Map.Entry en=(Map.Entry)itr.next();
+System.out.println(en.getKey()+" ********* "+en.getValue());
+}
+}
+}
+--------------------------------------------------------------------------------------------
 
 
 

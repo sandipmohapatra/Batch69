@@ -2113,7 +2113,52 @@ System.out.println(en.getKey()+" ********* "+en.getValue());
 }
 }
 --------------------------------------------------------------------------------------------
-
+Example-4
+---------------------
+package org.sandip;
+public class Student
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+}
+-------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class MapDemo 
+{
+public static void main(String[] args) 
+{
+HashMap<Integer, Student> hm=new HashMap<Integer, Student>();
+Student st1=new Student(101,"sandip","Bangalore");
+Student st2=new Student(102,"Shiva","Bangalore");
+Student st3=new Student(103,"Mohit","Bangalore");
+Student st4=new Student(104,"Ravi","Bangalore");
+hm.put(101, st1);
+hm.put(102, st2);
+hm.put(103, st3);
+hm.put(104, st4);
+Scanner ob=new Scanner(System.in);
+System.out.println("enter the rollno you want to search");
+Integer rollno=ob.nextInt();
+Set st=hm.entrySet();
+Iterator itr=st.iterator();
+while(itr.hasNext())
+{
+Map.Entry en=(Map.Entry)itr.next();
+if(en.getKey()==rollno)
+System.out.println(en.getKey()+"  "+en.getValue());
+}}}
+-------------------------------------------------------------------------------------------------------
 
 
 

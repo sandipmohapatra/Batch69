@@ -2159,7 +2159,10 @@ if(en.getKey()==rollno)
 System.out.println(en.getKey()+"  "+en.getValue());
 }}}
 -------------------------------------------------------------------------------------------------------
-
+wap to create a libray class--bookname,authorname,price,publication
+create a hashmap (slno,library class object)
+enter the slno and find the books details.
+------------------------------------------------------------------------
 
 
 

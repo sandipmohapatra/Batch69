@@ -2268,9 +2268,63 @@ public static void main(String[] args)
 	}
 }}
 ---------------------------------------------------------------------------------------------
+Comparable interface
+-----------------------------------
+It provides a single sorting sequence only.We can sort a single element only.
+In this we have a abstract method.
+public int compareTo(Student obj);
+---------------------------------------------------------------------------------------------------
+Comparator interface
+We can sort a Object of a class.
+In this we have a abstract method.
+public int compare(Object ob1,Object ob2);
+-------------------------------------------------------------------------------------------------------
+example-1
+--------------------
+package org.sandip;
+public class Student implements Comparable<Student>
+{
+int rollno,age;
+String name;
+public Student(int rollno, String name, int age) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.age = age;
+}
+@Override
+public int compareTo(Student obj) 
+{
+	if(age==obj.age)
+	return 0;
+	else if(age>obj.age)
+	return 1;
+	else
+		return -1;
+}
 
-
-
+}
+-------------------------------------------
+package org.sandip;
+import java.util.*;
+public class ComparableDemo 
+{
+public static void main(String[] args) {
+	ArrayList<Student> a1=new ArrayList<Student>();
+	a1.add(new Student(101,"Trupti",22));
+	a1.add(new Student(102,"Anil",25));
+	a1.add(new Student(103,"Kiran",27));
+	a1.add(new Student(104,"Sunil",23));
+	Collections.sort(a1);
+	for(Student st:a1)
+		System.out.println(st.age+ "  "+st.rollno+"  "+st.name);
+}
+}
+------------------------------------------------------------------
+we have age 23,22,21 .if first age is greater than the second it return (+) and values are swapped
+we have age 22,23,21 .if first age is greater than the second it return (+) and values are swapped
+we have age 21,22,23 .if first age is greater than the second it return (+) and values are swapped
+------------------------------------------------------------------
 
 
 

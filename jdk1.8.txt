@@ -2162,7 +2162,125 @@ System.out.println(en.getKey()+"  "+en.getValue());
 wap to create a libray class--bookname,authorname,price,publication
 create a hashmap (slno,library class object)
 enter the slno and find the books details.
-------------------------------------------------------------------------
+------------------------------------------------------Assignment-1----------------------------------
+wap to create a student class (rollno,name,address)
+create a PCM class(phy,chem,maths,total) marks
+create a PCB class(phy,chem,bio,total) marks
+Total you have to calculate
+use hyrarchal inheritance and create 2 objects for 2 students.
+------------------------------------------------------------------------------------------------------
+Example-1
+----------------------
+package org.sandip;
+import java.util.*;
+public class Student69 
+{
+String rollno,name,address;//instance variable can be accessed through out the class
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name,address");
+	rollno=ob.nextLine();
+	name=ob.nextLine();
+	address=ob.nextLine();
+}
+void display()
+{
+	System.out.println("the rollno is"+rollno);
+	System.out.println("the name is"+name);
+	System.out.println("the address is"+address);
+	}
+}
+-------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class PCM extends Student69
+{
+	float phy,chem,maths,total;
+	void input()
+	{
+		super.input();
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter phy,chem,maths");
+		phy=ob.nextFloat();
+		chem=ob.nextFloat();
+		maths=ob.nextFloat();
+		}
+	void display()
+	{
+		super.display();
+		total=phy+chem+maths;
+		System.out.println("phy marks is "+phy);
+		System.out.println("chem marks is "+chem);
+		System.out.println("maths marks is "+maths);
+		System.out.println("Total marks is "+total);
+			}
+	
+}
+---------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class PCB extends Student69
+{
+	float phy,chem,bio,total;
+	void input()
+	{
+		super.input();
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter phy,chem,maths");
+		phy=ob.nextFloat();
+		chem=ob.nextFloat();
+		bio=ob.nextFloat();
+		}
+	void display()
+	{
+		super.display();
+		total=phy+chem+bio;
+		System.out.println("phy marks is "+phy);
+		System.out.println("chem marks is "+chem);
+		System.out.println("maths marks is "+bio);
+		System.out.println("Total marks is "+total);
+					}
+	
+}
+-----------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class MainClass
+{
+public static void main(String[] args) 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter your stream");
+	String strm=ob.next();
+	if(strm.equals("PCM"))
+	{
+		PCM ob1=new PCM();
+		ob1.input();
+		ob1.display();
+		}
+	else
+	{
+		PCB ob2=new PCB();
+		ob2.input();
+		ob2.display();
+		
+	}
+}}
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

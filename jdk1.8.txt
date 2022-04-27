@@ -2415,6 +2415,57 @@ public static void main(String[] args) {
 }
 }
 ----------------------------------------------------------------------------------------------------------------------------------
+Lambda Expression(jdk1.8)
+-----------------------------------
+It is also known as Functional interface.
+In this the interface will only contain one abstract method so it is called functional interface.
+In lambda expression we don't require 2 classes (parent and child) .we don't have to override .we don't have to implement the interface.
+There is a anotation @FunctionalInterface
+It is used to declare an interface as function interface.
+
+-----------------------------------------------------------------------------------------------
+Here we have 3 new components in it.
+1)Argument List --It can be empty or have parameter.
+2)(), -> {body }
+The arrow token is used to link arguments -list and body of the expression.
+3)body ---It conatins the expression and statement.
+----------------------------------------------------------------------------------------
+()->{}no parameter
+(a)->{}one parameter
+(a,b)->{}multiple parameter
+-------------------------------------------------------------------------------
+Example-1
+-------------------
+package org.lambda;
+
+@FunctionalInterface
+interface example1
+{
+	public void display();
+}
+
+public class First
+{
+public static void main(String[] args) 
+{
+int length=10;
+int breadth=20;
+example1 obj=()->
+{
+	System.out.println("the length is "+length);
+	System.out.println("the breadth is "+breadth);
+	System.out.println("The area of the rectangle is :"+(length*breadth));
+};
+obj.display();
+}
+}
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 

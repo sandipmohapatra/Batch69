@@ -2325,9 +2325,96 @@ we have age 23,22,21 .if first age is greater than the second it return (+) and 
 we have age 22,23,21 .if first age is greater than the second it return (+) and values are swapped
 we have age 21,22,23 .if first age is greater than the second it return (+) and values are swapped
 ------------------------------------------------------------------
+Comparator interface
+--------------------------------------
+employee.java
+--------------------------------
+package org.sandip;
 
+public class Employee 
+{
+int empno,age;
+String name;
+public Employee(int empno, int age, String name) {
+	this.empno = empno;
+	this.age = age;
+	this.name = name;
+}
 
+}
+----------------------------------------------------------------------------------
+age sort
+-------------------
+package org.sandip;
 
+import java.util.Comparator;
+
+public class ComparatorDemo implements Comparator 
+{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		Employee ob1=(Employee) o1;
+		Employee ob2=(Employee) o2;
+		if(ob1.age==ob2.age)
+		return 0;
+		else if(ob1.age>ob2.age)
+			return 1;
+		else
+			return -1;
+	}
+
+}
+-----------------------------------------------------------------------
+name sorting
+--------------------------------
+package org.sandip;
+
+import java.util.Comparator;
+
+public class ComparatorDemo1 implements Comparator 
+{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		Employee ob1=(Employee) o1;
+		Employee ob2=(Employee) o2;
+		return ob1.name.compareTo(ob2.name);
+	}
+
+}
+--------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class CompareTest 
+{
+public static void main(String[] args) {
+	ArrayList al=new ArrayList();
+	al.add(new Employee(101,21,"Anil"));
+	al.add(new Employee(101,23,"Manoj"));
+	al.add(new Employee(101,20,"Ankit"));
+	al.add(new Employee(101,22,"Mohit"));
+	
+	Collections.sort(al,new ComparatorDemo());
+	Iterator itr=al.iterator();
+	while(itr.hasNext())
+	{
+		Employee emp=(Employee) itr.next();
+		System.out.println(emp.age+"   "+emp.empno+"  "+emp.name);
+	}
+	
+	
+	System.out.println("********************Sort By Name************************************");
+	Collections.sort(al,new ComparatorDemo1());
+	Iterator itr1=al.iterator();
+	while(itr1.hasNext())
+	{
+		Employee emp=(Employee) itr1.next();
+		System.out.println(emp.age+"   "+emp.empno+"  "+emp.name);
+	}
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------
 
 
 

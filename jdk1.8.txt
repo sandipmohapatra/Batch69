@@ -2601,6 +2601,32 @@ public static void main(String[] args) throws IOException
 }
 }
 -------------------------------------------------------------------------------------------
+Example-3
+------------------
+package org.fileDemo;
+import java.io.*;
+public class Third 
+{
+public static void main(String[] args) throws Exception
+{
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	System.out.println("Enter empno");
+	int empno=Integer.parseInt(br.readLine());
+	System.out.println("Enter empname");
+	String name=br.readLine();
+	System.out.println("Enter address");
+	String address=br.readLine();
+	System.out.println("Enter salary");
+	float salary=Float.parseFloat(br.readLine());
+	System.out.println("the empno is "+empno);
+	System.out.println("the empname is "+name);
+	System.out.println("the address is "+address);
+	System.out.println("the salary is "+salary);
+	
+	
+}
+}
+------------------------------------------------------------------
 
 
 

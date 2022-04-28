@@ -2460,7 +2460,66 @@ obj.display();
 }
 }
 -----------------------------------------------------------------------------------------------
+Example-2
+-----------------------
+package org.lambda;
+@FunctionalInterface
+interface example11
+{
+	public void display();
+}
 
+@FunctionalInterface
+interface example2
+{
+	public String name();
+}
+
+@FunctionalInterface
+interface example3
+{
+	public String address(String loc);
+}
+
+@FunctionalInterface
+interface example4
+{
+	public int sum(int a,int b);
+}
+
+public class Second
+{
+public static void main(String[] args)
+{
+	int length=10;
+	int breadth=20;
+	example11 obj=()->
+	{
+		System.out.println("The length is"+length);
+		System.out.println("The breadth is"+breadth);
+		System.out.println("The area is"+(length*breadth));
+			};
+	obj.display();
+	
+			example2 obj1=()->
+	{
+		return "Welcome to Lambda expression";
+	};
+	System.out.println(obj1.name());
+	
+	example3 obj2=(loc)->
+	{
+		return "My location is "+loc;
+	};
+		System.out.println(obj2.address("Bangalore"));
+		example4 obj3=(a,b)->
+		{
+			return a+b;
+		};
+		System.out.println("the sum is "+obj3.sum(500,200));
+}}
+
+----------------------------------------------------------------------------------------------------------------
 
 
 

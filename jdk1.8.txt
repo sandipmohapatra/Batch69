@@ -2578,7 +2578,29 @@ ObjectOutputStream -----------serialization and de-serialization
 DataInputStream
 DataOutputStream
 --------------------------------------------------------------
-
+example-2
+----------------------
+//reading data from the keyboard
+package org.fileDemo;
+import java.io.*;
+public class Second
+{
+public static void main(String[] args) throws IOException
+{
+	DataInputStream dis=new DataInputStream(System.in);
+	FileOutputStream fos=new FileOutputStream("student.txt");
+	System.out.println("enter the data");
+	int data;
+	while((data=dis.read())!='\n')
+	{
+		fos.write(data);
+	}
+	System.out.println("file writing over");
+	dis.close();
+	fos.close();
+}
+}
+-------------------------------------------------------------------------------------------
 
 
 

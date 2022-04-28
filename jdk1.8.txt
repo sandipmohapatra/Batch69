@@ -2520,7 +2520,64 @@ public static void main(String[] args)
 }}
 
 ----------------------------------------------------------------------------------------------------------------
+File Handling
+------------------------
+1)It is used to store and manage data.
+2)Reading and writing data into a file can be done using byte stream or character stream.
+3)The data flow from source to destination while we copy data from one file to the other.
+4)The process of reading and writing object into a file is known as serialization and de-serialization.
+5)We will be using java.io package.
+6)There are 2 types of stream by which we can read and write data into a file.
+a)byte stream
+b)character stream.
+Under byte stream and character stream we have different classes.
+6)While working with file we have to handle the exception because it throws checked Exception.
+Exceptions:- EOFException,FileNotFoundException,InterruptedIOException,IOException.
+------------------------------------------------------------------------------------------------------------------------------
+Example-1
+--------------------------
+package org.fileDemo;
+import java.io.*;
+import java.util.*;
+public class FirstFile 
+{
+public static void main(String[] args) 
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("enter the file name");
+String fname=ob.next();
+File f=new File(fname);
+System.out.println("the file name is "+f.getName());
+System.out.println("the file path is "+f.getPath());
+System.out.println("the file absolute path is "+f.getAbsolutePath());
+System.out.println("the file existing "+f.exists());
+System.out.println("the file is in read mode "+f.canRead());
+System.out.println("the file is in write mode "+f.canWrite());
+System.out.println("the file is in execute mode "+f.canExecute());
+System.out.println("the file length is "+f.length());
+System.out.println("the file is a file "+f.isFile());
+System.out.println("the file  is  a folder "+f.isDirectory());
 
+}
+}
+--------------------------------------------------------------------------------------------------------------- 
+Byte stream
+------------------------
+1)InputStream ---reading data from the file.
+2)OutputStream---writing data into the file.
+----------------------------------------------------------------
+BufferInputStream
+BufferOutputStream
+----------------------------------------------
+FileInputStream
+FileOutputStream
+-------------------------------------------
+ObjectInputStream
+ObjectOutputStream -----------serialization and de-serialization
+---------------------------------------------------
+DataInputStream
+DataOutputStream
+--------------------------------------------------------------
 
 
 

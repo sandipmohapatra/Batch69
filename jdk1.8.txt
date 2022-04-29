@@ -2627,12 +2627,138 @@ public static void main(String[] args) throws Exception
 }
 }
 ------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+example-4
+----------------------
+//reading data from one file and writing data into another file.
+package org.fileDemo;
+import java.io.*;
+public class Fourth {
+public static void main(String[] args) throws Exception
+{
+	FileInputStream fis=new FileInputStream("student.txt");//read
+	FileOutputStream fos=new FileOutputStream("student1.txt");//writing
+	int data;
+	while((data=fis.read())!=-1)
+	{
+		fos.write(data);
+	}
+	fis.close();fos.close();
+	System.out.println("file copied..................");
+}
+}
+----------------------------------------------------------------------------------
+example-5
+---------------------------------
+package org.fileDemo;
+import java.io.*;
+public class uppercase{
 
+    public static void main(String[] args) {
+    
+    try {
+        FileReader reader = new FileReader("student.txt");
+        FileWriter writer = new FileWriter("student2.txt");
 
+        int data;
+        int data2;
+        while((data=reader.read())!= -1) //-1 indicate the end of the file.
+        {
+          data2=Character.toUpperCase(data);
+          writer.write(data2);
+        }
+        reader.close();
+        writer.close();
 
+        
+    } 
+    catch (Exception e) 
+    {
+        e.printStackTrace();
+    
+  }
+}}
+---------------------------------------------------------------------------------------------------------------------------------
+//writing object into the file and reading object from the file.
+//it is known as serialization and de-serialization
+//ObjectInputStream ---reading object
+//ObjectOutputStream ---writing object.
+Serializable----It is interface with no abstract methods in it.So it is called marker Interface.
+------------------------------------------------------------------------------------------------------------------------------------
+example-6
+------------------------
+package org.fileDemo;
+import java.io.*;
+public class Student implements Serializable
+{
+int rollno;
+String name,address;
+}
+-----------------------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class SerializableDemo 
+{
+public static void main(String[] args)throws IOException 
+{
+	Student obj=new Student();
+	obj.rollno=101;
+	obj.name="sandip";
+	obj.address="bangalore";
+	FileOutputStream fos=new FileOutputStream("object.txt");
+	ObjectOutputStream os=new ObjectOutputStream(fos);
+	os.writeObject(obj);
+	fos.close();os.close();
+	System.out.println("Object written into the file..................");
+}
+}
+-----------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class DeserializableDemo 
+{
+public static void main(String[] args)throws Exception 
+{
+	Student s1=null;
+	FileInputStream fis=new FileInputStream("object.txt");
+	ObjectInputStream os=new ObjectInputStream(fis);
+	s1=(Student) os.readObject();
+	fis.close();os.close();
+	System.out.println("The rollno is "+s1.rollno);
+	System.out.println("The name is "+s1.name);
+	System.out.println("The address is "+s1.address);
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------
+Example-7
+-------------------
+-------------------------------------------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class Capitalize
+{
+	public static void main(String[] args) throws IOException {
+        BufferedReader br1 = new BufferedReader(new FileReader("student.txt"));
+        String rline;
+        String output = "";
 
+        while ((rline = br1.readLine()) != null) 
+        {
+            String[] lineArr = rline.split(" ");
 
+            for (String word : lineArr) 
+            {
+                word = Character.toUpperCase(word.charAt(0)) + word.substring(1);
+                output += word + " ";
+            }
+            output += "\n";
+        }
+        System.out.print(output);
+        br1.close();
+    }
+}
 
+--------------------------------------------------------------------------------------------------------------
 
 
 

@@ -1,0 +1,36 @@
+Arithmetic Operator
+ if-elseIf	
+Switch Case	
+for Loop	
+Arrays	
+Class definition and Object creation	
+Overloaded Constructor	
+Encapsulation	
+Aggregation	
+Enums	
+Wrapper Class	
+Strings
+String Builder	
+LocalDate and Time	
+Write Test cases using JUnit5	
+Test Driven Development (TDD)	
+Polymorphism	
+Abstract Classes	
+Exception Handling	
+Generic Type	
+Generic Methods	
+ Iterating through Collection	
+ Maps
+Queue	
+Files and Stream	
+Lambda Expression	 
+Method Reference	
+Streams-Stringformat
+Streams-numbers	Streams-Array-Integers	
+Streams-evennumbersfinder	
+--------------------------------------------------------------------------------------------------
+Exercise-Getting Started with JavaScript	
+Exercise-Dom and DOM events	
+Exercise-Application Servers using HTTP Protocol	
+Exercise-Asynchronous Applications 	
+Exercise-Test Web Applications Using JavaScript

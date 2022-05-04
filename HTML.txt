@@ -1,0 +1,17 @@
+HTML-Hyper Text markup language
+It is used to create web-pages.
+We have some pre-defined tags for creating the web-pages.
+This is frontend.We have to make the page attractive for the users.
+---------------------------------------------------------
+<h1> to <h6> ---is for heading
+<hr> ---horizontal line
+<input type=text/password/date/time/email/file/number/radio/checkbox>
+<table>
+<tr><th><th></tr>
+<tr><td><td></tr>
+</table>
+---------------------------------------------------------------------------
+The data flow from frontent to the middleware.
+----------------------------------------------------------------------
+second?t1=sandip&t2=sandip%40gmail.com&t3=07760213015&t4=2022-05-01&t5=Bangalore&t6=1234
+------------------------------------------------------------------------------------------------------------------------------------------

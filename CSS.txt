@@ -1,0 +1,26 @@
+<html>
+<script>
+JAVA SCRIPT
+<script>
+<style>
+CSS
+</style>
+<body>
+HTML
+<body>
+</html>
+------------------------------------------------------------------------------------------------
+Purpose of learning CSS is to make the frontend decorative.
+-------------------------------------------------------------------------------------------------
+There are 3 types of CSS
+i)internal css :- It can be used with the same page.
+ii)external css:- It can be used within the total application .
+iii)inline css:- It can be used within the single line.
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+ 

@@ -1,0 +1,35 @@
+<html>
+<script>
+var name=prompt("Enter your name");
+var address=prompt("Enter your address");
+var phy=prompt("Enter phy marks");
+var chem=prompt("Enter chem marks");
+var bio=prompt("Enter bio marks");
+var sum=parseInt(phy)+parseInt(chem)+parseInt(bio);
+var avg=sum/3;
+document.write("The name is "+name);
+document.write("<br>");
+document.write("The address is "+address);
+document.write("<br>");
+document.write("The total is "+sum);
+document.write("<br>");
+document.write("The average is "+avg);
+document.write("<br>");
+if(avg>=70)
+{
+document.write("First Division ");
+}
+else if(avg>=60)
+{
+document.write("Second Division ");
+}
+else if(avg>=50)
+{
+document.write("Third Division ");
+}
+else
+document.write("Fail ");
+</script>
+<body>
+</body>
+</html>

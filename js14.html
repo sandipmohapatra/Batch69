@@ -1,0 +1,32 @@
+<html>
+<script>
+var a=prompt("Enter 1 for addition 2 for subtraction");
+var x=parseInt(a);
+switch(x) 
+{
+case 1:
+function addno()
+{
+b=prompt("Enter a no");
+c=prompt("Enter a no");
+d=parseInt(b)+parseInt(c);
+document.write("The sum is "+d);
+}
+break;
+case 2:
+function subno()
+{
+b=prompt("Enter a no");
+c=prompt("Enter a no");
+d=parseInt(b)-parseInt(c);
+document.write("The sub is "+d);
+}
+break;
+default:document.write("invalid no");
+}
+</script>
+<body>
+<input type=button value="Add two nos" onclick="addno()"/>  <!-- button event -->
+<input type=button value="Sub two nos" onclick="subno()"/>
+</body>
+</html>

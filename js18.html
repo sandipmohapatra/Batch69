@@ -1,0 +1,76 @@
+<!-- <input type=text name=t1 size=20 placeholder="enter your name" id=x1>
+
+attributes of input :- type,name,size,placeholder,id -->
+
+<html>
+<style>
+h1{color:red;}
+</style>
+<script>
+function addno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a+b;
+}
+
+function subno()
+{
+var a=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+t3.value=a-b;
+}
+
+function mulno()
+{
+var a=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+t3.value=a*b;
+}
+
+function divno()
+{
+var a=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+t3.value=a / b;
+}
+
+function sqrno()
+{
+var a=document.getElementById("t1").value;
+t3.value=a * a;
+}
+
+function cubno()
+{
+var a=document.getElementById("t1").value;
+t3.value=a * a * a;
+}
+</script>
+
+<body>
+<h1><center>Calculator Program</center></h1><hr> 
+<table border=1>
+<tr><td>Enter a no<td><input type=text id="t1" size=20></tr>
+<tr><td>Enter a no<td><input type=text id="t2" size=20></tr>
+<tr><td><td>
+<input type=submit value="add" onclick='addno()'>
+<input type=submit value="sub" onclick='subno()'>
+<input type=submit value="mul" onclick='mulno()'>
+<input type=submit value="div" onclick='divno()'>
+<input type=submit value="sqr" onclick='sqrno()'>
+<input type=submit value="cube" onclick='cubno()'>
+</tr>
+
+<tr><td>Answer<td><input type=text id=t3 size=20></tr>
+</table>
+</body>
+
+</html>
+
+
+
+
+
+
+

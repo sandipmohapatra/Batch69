@@ -1,0 +1,39 @@
+Angular10
+------------------------
+1)Angular is an open source,crosss platform.
+2)It provides end to end solution for building,debugging,testing and deploying.
+3)It provides testing framework like jasmine,karma,protractor.
+4)Language used in angular is type script.It support oops concept.
+5)In javascript we have var as the datatype where as in typescript we use let as datatype.
+6)The typescript is developed by facebook.
+7)After compilation of typescript the javascript file is created which is supported by the browser.
+8)Angular framework support MVC (model,veiw and controller)
+9)It is used to create SPA(single page application)
+10)It has high speed and performance is better as compared to older technology.
+11)Angular use AOT compiler.(Ahead-of-time).
+------------------------------------------------------------------------------------------------------------------------------------
+installation
+----------------------
+step 1:install node.:-https://nodejs.org/en/download/  --->Windows Installer (.msi) --->64bit--->download and install
+command prompt :- node -v
+
+step 2:-npm install -g @angular/cli
+step 3:-desktop> ng new wipro37
+step 4:-cd wipro37
+step 5:- desktop/wipro37>
+step 6:-to start the node server
+step 7:- desktop/wipro37>ng serve
+---------------------------------------------------------------------
+step 8:-open browser ---->localhost:4200
+step 9:- install visual studio code
+----------------------------------------------------------------------------------------------------------------------------
+When you create a project we have make changes in these files 
+1)app.component.ts
+2)app.component.html
+3)app.component.css
+4)app.module.ts----all the files details used in the project.
+5)index.html---change the selector name
+------------------------------------------------------------------------------------------------------------
+step-1:-how to create project
+src/app>ng g c login --skipTests
+-------------------------------------------

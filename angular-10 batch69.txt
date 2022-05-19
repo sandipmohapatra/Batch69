@@ -53,3 +53,8 @@ app.component.html
 </table>
 </form>
 -------------------------------------------------------------
+step 2:- paste the selector in the index.html
+step 3:- [bootstrap] paste the component you want to run.
+-------------------------------------------------------------------------------------------
+create :- register,contact,service,feedback pages
+-------------------------------------------------------------------------------------------

@@ -83,3 +83,74 @@ export class Example1Component {
 }
 
 --------------------------------------------------------------------------------
+example-2
+----------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example1',
+  template: `
+  <p>Hello my name is {{name}}</p>
+  <p>Hello my email is {{email}}</p>
+  <p>Hello my address is {{address.street}} {{address.loc}} {{address.state}} {{address.city}}</p>  ` 
+  })
+export class Example1Component {
+ name:string;
+ email:string;
+ address:any;
+ constructor()
+ {
+   this.name='sandip';
+   this.email='sandip@gmail.com';
+   this.address=
+   {
+     street:101,
+     loc:'Sivaji Nagar',
+     state:'Karnataka',
+     city:'Bangalore'
+
+   }
+ }
+}
+--------------------------------------------------------------------------------
+example-3
+--------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example1',
+  template: `
+  <p>Hello my name is {{name}}</p>
+  <p>Hello my email is {{email}}</p>
+  <p>Hello my address is {{address.street}} {{address.loc}} {{address.state}} {{address.city}}</p>  
+  <h3>My hobbies are </h3>{{hobbies}}
+  <h3>My daily Foods are </h3>
+  <ul>
+  <li *ngFor="let food of foods">
+  {{food}}
+  </li>
+  </ul> 
+  ` 
+  })
+export class Example1Component {
+ name:string;
+ email:string;
+ address:any;
+ hobbies:string[];
+ foods:string[];
+ constructor()
+ {
+   this.name='sandip';
+   this.email='sandip@gmail.com';
+   this.address=
+   {
+     street:101,
+     loc:'Sivaji Nagar',
+     state:'Karnataka',
+     city:'Bangalore'
+   }
+   this.hobbies=['music','cricket','football','movies','sports'];
+   this.foods=['Biryani','rice and dal','noodles','ice-cream'];
+ }
+}
+---------------------------------------------------------------------------------------

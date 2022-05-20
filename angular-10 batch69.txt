@@ -154,3 +154,60 @@ export class Example1Component {
  }
 }
 ---------------------------------------------------------------------------------------
+Routing :- Navigating
+---------------------------------------------------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'myproject',
+  template:`MENU <ul>
+  <li><a [routerLink]="['/Registration']">Registration</a></li>
+  <li><a [routerLink]="['/Contact']">Contact</a></li>
+  </ul><hr><hr>
+  <router-outlet></router-outlet>
+  `
+  })
+export class MyProjectComponent {
+  title = 'batch69';
+}
+-------------------------------------------------------------------------------------------
+change the selector in index.html and app.modile.ts
+---------------------------------------------------------------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ContactComponent } from './contact/contact.component';
+import { Example1Component } from './example1/example1.component';
+import { MyProjectComponent } from './MyProject';<--------------------------
+import { RouterModule, Routes } from '@angular/router';<------------------
+
+const appRoutes : Routes =[  <----------------------------------
+{path:'Registration',component:RegistrationComponent},
+{path:'Contact',component:ContactComponent},
+]
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    RegistrationComponent,
+    ContactComponent,
+    Example1Component,
+    MyProjectComponent <--------------------------
+  ],
+  imports: [
+    RouterModule.forRoot(appRoutes),
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [MyProjectComponent] <---------------------------
+})
+export class AppModule { }
+
+-------------------------------------------------------------------------
+create :- register,contact,service,feedback pages
+------------------------------------------------------------------------------
+

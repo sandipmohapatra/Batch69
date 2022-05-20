@@ -210,4 +210,136 @@ export class AppModule { }
 -------------------------------------------------------------------------
 create :- register,contact,service,feedback pages
 ------------------------------------------------------------------------------
+Using BootStrap Form
+------------------------------------------
+Example-1
+------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Student FeedBack Page</h2>
+  <form role="form" action=second>
+    <div class="form-group">
+        <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name" placeholder="Enter name" name=t1 required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone no:</label>
+  <input type="Number" class="form-control" id="Phone" placeholder="Enter phone no" name=t2 required>
+      </div>
+   
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email" name=t3 required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">FeedBack:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter your FeedBack" name=t4 required>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+<button type="submit" class="btn btn-default">Submit</button> 
+  </form>
+</div>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------
+BootStrap MenuBar
+-------------------------------------------
+example-1
+-------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'bootdemo',
+  templateUrl: './BootStrapDemo.html',
+  })
+export class BootDemoComponent {
+  title = 'batch69';
+}
+-------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+ <header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body id="myPage">
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>Wipro Batch-69</a>
+  <a routerLink="home" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Registration <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a routerLink="/addemployee" class="w3-bar-item w3-button">EmployeeRegistration</a>
+      <a routerLink="/addcustomer"class="w3-bar-item w3-button">CustomerRegistration</a>
+    </div>
+    </div>
+  <a [routerLink]="['/Registration']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Register</a>
+  <a [routerLink]="['/Contact']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  <a [routerLink]="['/Feedback']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Feedback</a>  
+  
+</div>
+<router-outlet></router-outlet>
+</div>
+    </body>
+    </header>
+    </html>
+--------------------------------------------------------------------------------------------------------
+app.module.ts <-it will register all the components of the application
+------------------------------------------------------------------------------------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ContactComponent } from './contact/contact.component';
+import { Example1Component } from './example1/example1.component';
+import { MyProjectComponent } from './MyProject';
+import { RouterModule, Routes } from '@angular/router';
+import { FeedbackComponent } from './feedback/feedback.component';
+import {BootDemoComponent} from './BootStrapDemo';
+
+
+const appRoutes : Routes =[
+{path:'Registration',component:RegistrationComponent},
+{path:'Contact',component:ContactComponent},
+{path:'Feedback',component:FeedbackComponent},
+]
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    RegistrationComponent,
+    ContactComponent,
+    Example1Component,
+    MyProjectComponent,
+    FeedbackComponent,
+    BootDemoComponent
+  ],
+  imports: [
+    RouterModule.forRoot(appRoutes),
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [BootDemoComponent]
+})
+export class AppModule { }
+-----------------------------------------------------------------------

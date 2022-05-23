@@ -343,3 +343,20 @@ const appRoutes : Routes =[
 })
 export class AppModule { }
 -----------------------------------------------------------------------
+Create a COVID-19 hospital
+1)registration page
+2)doctor time table
+3)book a doctor
+4)book a bed
+5)book a ambulance
+6)feedback
+---------------------------------
+
+
+
+
+
+
+
+
+

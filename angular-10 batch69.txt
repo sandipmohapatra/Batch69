@@ -382,7 +382,32 @@ In this user can update the entry.A change made to the user entry in the html in
 
 Entry your name<input type=text [(ngModel)]="name">
 ----------------------------------------------------------------------------------------------------------------
+Example-1
+----------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-example2',
+  templateUrl: './example2.component.html',
+  styleUrls: ['./example2.component.css']
+})
+export class Example2Component 
+{
+public product=
+{
+Name:'Samsung TV',
+Price:56000.56,
+}}
+---------------------------------------------------------------------------
+<dl>
+    <dt>Name</dt>
+    <dd>{{product.Name}}</dd>
+    <dt>Price</dt>
+    <dd>{{product.Price}}</dd>
+    </dl>
+---------------------------------------------------------------------------
+you enter your details and display it.
+------------------------------------------------------------------
 
 
 

@@ -351,8 +351,37 @@ Create a COVID-19 hospital
 5)book a ambulance
 6)feedback
 ---------------------------------
+Binding of data
+--------------------------
+There are two ways of data binding
+1)one way data binding.
+a)interpolation
+we use double curly braces {{}} and is known as interpolation or template expression.
+example:-
+we are assigning the value inside the component and displayed on the html page or component page.
+{{name}}
+<p>The sum of 6 and 7 is {{6+7}} </p>
+<p>The multiply of 6 and 7 is {{6*7}} </p>
+----------------------------------------------------------------------------------------------------------------------------
+b)property binding
+--------------------------------------------
+In this we use square brackets to the DOM properties.
+example:-
+<img[src]="shoe.jpg">
+-----------------------------------------------------------------------------------------------
+c)event binding
+--------------------------
+In this we use circular brackets .It is mostly used with buttons.
+we put events in parentheses.
+example:-
+---------------------
+<button(click)="onSave()">Save</button>
+-------------------------------------------------------------------------------------------------------
+2)two way data binding.
+In this user can update the entry.A change made to the user entry in the html input element we require two-way bnding.
 
-
+Entry your name<input type=text [(ngModel)]="name">
+----------------------------------------------------------------------------------------------------------------
 
 
 

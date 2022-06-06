@@ -1,0 +1,30 @@
+<html>
+<form action="Second.jsp">
+<h1><center>Registration Page</center></h1><hr>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20 required></tr>
+<tr><td>Enter your phoneno<td><input type=number name=t3 size=20 required></tr>
+<tr><td>Enter your email<td><input type=email name=t4 size=20 required></tr>
+<tr><td>Enter your DOB<td><input type=date name=t5 size=20 required></tr>
+<tr><td><td><input type=submit name=b1 value=insert></tr>
+</table>
+</form>
+</html>
+---------------------------------------------------------------------------------------------------------------
+<% String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");
+String e=request.getParameter("t5");%>
+
+<% out.println("The name is "+a);
+out.println("<br>");
+out.println("The address is "+b);
+out.println("<br>");
+out.println("The phoneno is "+c);
+out.println("<br>");
+out.println("The email is "+d);
+out.println("<br>");
+out.println("The DOB is "+e);%>
+---------------------------------------------------------------------

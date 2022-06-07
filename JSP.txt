@@ -67,6 +67,82 @@ catch(Exception ae)
 }
 %>
 ---------------------------------------------------------------------------------------------------------------------
+example-2
+--------------------
+<html>
+<form action="Second.jsp">
+<h1><center>Registration Page</center></h1><hr>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20 required></tr>
+<tr><td>Enter your phoneno<td><input type=number name=t3 size=20 required></tr>
+<tr><td>Enter your email<td><input type=email name=t4 size=20 required></tr>
+<tr><td>Enter your DOB<td><input type=date name=t5 size=20 required></tr>
+<tr><td><td><input type=submit name=b1 value=insert>
+<input type=submit name=b1 value=update>
+<input type=submit name=b1 value=delete>
+<input type=submit name=b1 value=select></tr>
+</table>
+</form>
+</html>
+-------------------------------------------------
+<%@page import="java.sql.*" %>
+<% 
+String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");
+String e=request.getParameter("t5");
+String f=request.getParameter("b1");%>
 
+<%try
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	if(f.equals("insert"))
+	{
+	PreparedStatement ps=con.prepareStatement("insert into student69 values(?,?,?,?,?)");
+	ps.setString(1,a);
+	ps.setString(2,b);
+	ps.setString(3,c);
+	ps.setString(4,d);
+	ps.setString(5,e);
+	ps.execute();
+	out.println("row inserted");
+	}
+	else if(f.equals("update"))
+	{
+	PreparedStatement ps=con.prepareStatement("update student69 set address=?,phoneno=?,email=?,dob=? where name=?");
+	ps.setString(1,b);
+	ps.setString(2,c);
+	ps.setString(3,d);
+	ps.setString(4,e);
+	ps.setString(5,a);
+	ps.execute();
+	out.println("row updated");
+	}
+	else if(f.equals("delete"))
+	{
+	PreparedStatement ps=con.prepareStatement("delete from student69 where name=?");
+	ps.setString(1,a);
+	ps.execute();
+	out.println("row deleted");
+	}
+	else
+	{
+	PreparedStatement ps=con.prepareStatement("select * from student69");
+	ResultSet rs=ps.executeQuery();
+	while(rs.next())
+	{
+	out.println(rs.getString(1)+"  "+rs.getString(2)+"  "+rs.getString(3)+"  "+rs.getString(4)+"  "+rs.getString(5));	
+	}
+	}
+}
+catch(Exception ae)
+{
+	out.println("the error is "+ae);
+}
+%>
+---------------------------------------------------------------------------------------
 
 

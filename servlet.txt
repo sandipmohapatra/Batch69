@@ -119,3 +119,5 @@ public void service(HttpServletRequest req,HttpServletResponse res)throws Servle
 }
 }
 ----------------------------------------------------------------------------------------
+create table wiproreg69 (empno number,name varchar2(30),address varchar2(30),phoneno varchar2(30),email varchar2(30),password varchar2(30));
+------------------------------------------------------------------------------------------------------------

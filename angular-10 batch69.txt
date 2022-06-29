@@ -1103,27 +1103,34 @@ updateStudent(id: number, student: Student): Observable<any>{http.put('http://lo
 
 subscribing:- kicks off the Observable stream.without a subscribe the stream won't start emitting values.
 ---------------------------------------------------------------------------------------------------------------------------------------
-Spring BOOT
-------------------------------
-@RestController
-@RequestMapping("/rest/student")
-@CrossOrigin(origins = "http://localhost:4200")
-public class StudentRestController {
-@Autowired
-private IStudentService service;
-	@Autowired
-	private StudentUtil util;
-i)@PostMapping("/save")
-ii)@GetMapping("/all")
-iii)@GetMapping("/one/{id}")
-iv)@DeleteMapping("/remove/{id}")
-v)@PutMapping("/modify/{id}")
-}
 
 
+oracle
+https://drive.google.com/file/d/0B_8PmSMM3tRdMl9PS1hUMFFEbkk/view?usp=sharing&resourcekey=0-qjqe8sjixyAi8meOXxO_jQ
+-----------------------------------------------------------------------
 
 
-
+-------------------------------------------------------------------------------------
+JDK Any Latest Version/ 8/11
+https://www.oracle.com/java/technologies/downloads/
+https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html
+-------------------------------------------------------------------------------------------
+STS:
+ https://spring.io/tools
+------------------------------------------------------------------
+Node JS:
+ https://nodejs.org/en/download/
+-----------------------------------------------------------------------------------
+VS Code Editor:
+ https://code.visualstudio.com/download
+------------------------------------------------------------------------------------------
+MySQL:
+ https://dev.mysql.com/downloads/installer/
+---------------------------------------------------------------------------------------
+MongoDB:
+ https://www.mongodb.com/try/download/community
+ Version: 3.6
+----------------------------------------------------------------------------------------------------
 
 
 

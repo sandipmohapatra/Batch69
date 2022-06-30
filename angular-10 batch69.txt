@@ -1104,6 +1104,57 @@ updateStudent(id: number, student: Student): Observable<any>{http.put('http://lo
 subscribing:- kicks off the Observable stream.without a subscribe the stream won't start emitting values.
 ---------------------------------------------------------------------------------------------------------------------------------------
 
+springBoot:-RestEndPoint
+---------------------------------------------
+1)@RestController
+2)@RequestMapping("/rest/student")
+3)@CrossOrigin(origins = "http://localhost:4200")
+--------------------------------------------------------------------------
+4)@PostMapping("/save")
+--------------------------------------------------
+5)@GetMapping("/all")
+-------------------------------------------------------
+6)@DeleteMapping("/remove/{id}")
+-------------------------------------------------------------
+7)@PutMapping("/modify/{id}")
+--------------------------------------------------------------------------
+
+
+--------------------------oooooooooooo------------------------------------------------------------------
+HTTP status are the data send from the backend to frontend
+----------------------------------------------------------------------------------------------------------------
+String body = "Student '"+id+"' created";
+1)resp =  new ResponseEntity<String>(body,HttpStatus.CREATED); //201
+-----------------------------------------------------------------------------------------------------------------------------------------------
+2)resp =  new ResponseEntity<String>("Unable to Create Student",HttpStatus.INTERNAL_SERVER_ERROR); //500
+------------------------------------------------------------------------------------------------------------------------------
+List<Student> list = service.getAllStudents();
+			if(list!=null && !list.isEmpty()) {
+				log.info("Data is not empty=>"+list.size());
+				list.sort((s1,s2)->s1.getName().compareTo(s2.getName()));
+3)resp = new ResponseEntity<List<Student>>(list, HttpStatus.OK);//200
+---------------------------------------------------------------------------------------------------------------------------------------------
+boolean exist = service.isStudentExist(id);
+			if(exist) {
+				service.deleteStudent(id);
+4)resp = new ResponseEntity<String>("Student '"+id+"' not exist",HttpStatus.BAD_REQUEST);//401
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 oracle
 https://drive.google.com/file/d/0B_8PmSMM3tRdMl9PS1hUMFFEbkk/view?usp=sharing&resourcekey=0-qjqe8sjixyAi8meOXxO_jQ
